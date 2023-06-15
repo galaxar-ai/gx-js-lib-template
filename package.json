@@ -32,7 +32,8 @@
         "prettier": "prettier . --write --ignore-unknown",
         "lint": "eslint \"./src/**/*.js\"",
         "lint-fix": "eslint \"./src/**/*.js\" --fix",
-        "clean": "shx rm -rf cjs",        
+        "clean": "shx rm -rf cjs", 
+        "clean-test": "shx rm -rf .nyc_output coverage",        
         "build": "pnpm clean && swc ./src/*.js -d ./cjs",
         "prepare": "husky install"
     },
