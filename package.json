@@ -1,6 +1,6 @@
 {
     "name": "gx-js-lib-template",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Javascript library template based",
     "main": "cjs/index",
     "module": "src/index.js",
