@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/feature.js"],"sourcesContent":["function feature() {\n    return 'fancy feature';\n}\n\nexport default feature;\n"],"names":["feature"],"mappings":";;;;+BAIA;;;eAAA;;;AAJA,SAASA;IACL,OAAO;AACX;MAEA,WAAeA"}

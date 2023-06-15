@@ -1,0 +1,65 @@
+{
+    "name": "gx-js-lib-template",
+    "version": "0.0.1",
+    "description": "Javascript library template based",
+    "main": "cjs/index",
+    "module": "src/index.js",
+    "react-native": "src/index.js",
+    "exports": {
+        ".": {
+            "import": "./src/index.js",
+            "require": "./cjs/index.js"
+        },
+        "./**/*": {
+            "import": "./src/**/*.js",
+            "require": "./cjs/**/*.js"
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Rockie Guo <rockie@kitmi.com.au>",
+    "nyc": {
+        "exclude": [
+            ".*",
+            "cjs",
+            "__test__"
+        ]
+    },
+    "scripts": {
+        "test": "pnpm build && mocha --recursive ./test/*.spec.js",
+        "cover": "nyc --reporter=html --reporter=text mocha --recursive ./test/*.spec.js && open ./coverage/index.html",
+        "prettier": "prettier . --write --ignore-unknown",
+        "lint": "eslint \"./src/**/*.js\"",
+        "lint-fix": "eslint \"./src/**/*.js\" --fix",
+        "clean": "shx rm -rf cjs",
+        "precommit": "pnpm lint-fix && pnpm test",
+        "build": "pnpm clean && swc ./src/*.js -d ./cjs",
+        "prepare": "husky install"
+    },
+    "keywords": [
+        "javascript",
+        "library"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@swc-node/register": "^1.6.5",
+        "@swc/cli": "^0.1.62",
+        "@swc/core": "^1.3.64",
+        "chai": "^4.3.7",
+        "eslint": "^8.42.0",
+        "husky": "^8.0.3",
+        "mocha": "^10.2.0",
+        "nyc": "^15.1.0",
+        "prettier": "^2.8.8",
+        "shx": "0.3.4"
+    },
+    "prettier": {
+        "quoteProps": "consistent",
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "useTabs": false
+    }
+}
