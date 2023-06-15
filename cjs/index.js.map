@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/index.js"],"sourcesContent":["export { default as feature } from './feature';"],"names":["feature"],"mappings":";;;;+BAAoBA;;;eAAAA,gBAAO;;;gEAAQ"}
+{"version":3,"sources":["../src/index.js"],"sourcesContent":["export { default as feature } from './feature';\n"],"names":["feature"],"mappings":";;;;+BAAoBA;;;eAAAA,gBAAO;;;gEAAQ"}
